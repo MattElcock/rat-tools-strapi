@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "weights",
+  "info": {
+    "singularName": "weight",
+    "pluralName": "weights",
+    "displayName": "Weight"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "taken": {
+      "type": "date",
+      "required": true
+    },
+    "reading": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "pet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pet.pet",
+      "inversedBy": "weights"
+    }
+  }
+}
