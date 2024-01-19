@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pets",
+  "info": {
+    "singularName": "pet",
+    "pluralName": "pets",
+    "displayName": "pet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "dateOfBirth": {
+      "type": "date",
+      "required": true
+    },
+    "fur": {
+      "type": "customField",
+      "options": [
+        "White",
+        "Black",
+        "Gray",
+        "Cream",
+        "Brown",
+        "Hairless"
+      ],
+      "required": true,
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "weights": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::weight.weight",
+      "mappedBy": "pet"
+    }
+  }
+}

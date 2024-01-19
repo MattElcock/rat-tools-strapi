@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_weight_management_weights",
+  "info": {
+    "displayName": "Weights",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "taken": {
+      "type": "date",
+      "required": true
+    },
+    "reading": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    }
+  }
+}
