@@ -4,7 +4,7 @@
   "info": {
     "singularName": "pet",
     "pluralName": "pets",
-    "displayName": "pet",
+    "displayName": "Pet",
     "description": ""
   },
   "options": {
@@ -38,6 +38,13 @@
       "relation": "oneToMany",
       "target": "api::weight.weight",
       "mappedBy": "pet"
+    },
+    "sex": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ]
     }
   }
 }
